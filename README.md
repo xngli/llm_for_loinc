@@ -9,9 +9,9 @@ The dependencies are specified in  `requirements.txt`. Run the following to inst
 `pip install -r requirements.txt`
 
 ## Datasets and preprocessing
-There are two dataset that's required for this project: 1) the offical [LOINC](https://loinc.org/file-access/?download-id=476131) table, and 2) the [MIMC-III](https://physionet.org/content/mimiciii/1.4/D_LABITEMS.csv.gz) Clinical Database 1.4. Proper registration and/or training is needed to obtain both datasets therefore they are not included in this repository. Once these data are downloaded they should be placed in the `/datasets` folder.
+There are two datasets required for this project: 1) the offical [LOINC](https://loinc.org/file-access/?download-id=476131) table, and 2) the [MIMIC-III](https://physionet.org/content/mimiciii/1.4/D_LABITEMS.csv.gz) Clinical Database 1.4. Proper registration and/or training is needed to obtain both datasets therefore they are not included in this repository. Once these data are downloaded they should be placed in the `/datasets` folder.
 
-Before model training and test, run the following to preprocess and augment the data
+Before model training and testing, run the following to preprocess and augment the data
 
 `python preprocessing/data_processing.py`
 
@@ -25,9 +25,10 @@ The model development consists of different stages. Use the following for traini
 
 - Train and test in first stage fine-tuning
 
-`python train/first_stage.py`
-
-`python test/test_first_stage.py`
+```
+python train/first_stage.py
+python test/test_first_stage.py
+```
 
 - Train and test in second stage fine-tuning
 
