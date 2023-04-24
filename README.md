@@ -32,19 +32,19 @@ python test/test_pretained.py
 - Train and test in first stage fine-tuning
 
 ```
-python train/first_stage.py
+python train/train_first_stage.py
 python test/test_first_stage.py
 ```
 
 - Train and test in second stage fine-tuning
 
 ```
-python train/second_stage.py
+python train/train_second_stage.py
 python test/test_second_stage.py
 ```
 
 - Skip first stage fine-tuning and go directly to second stage fine-tuning
 
-```python train/skip_first_stage.py
+```python train/train_skip_first_stage.py
 python test/test_skip_stage.py
 ```
