@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 
 
-def eval(model, source_df, target_df):
+def test_model(model, source_df, target_df):
     # Embeddings of LOINC code - LONG_COMMON_NAME using official LOINC table
     target_sentences = tf.constant(
         target_df["LONG_COMMON_NAME"].apply(lambda x: x.lower()).to_list()

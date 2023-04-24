@@ -1,6 +1,8 @@
 import pandas as pd
 import tensorflow as tf
 
+from test_utils import test_model
+
 DATA_DIR = "datasets/"
 MODEL_DIR = "saved_models/"
 
@@ -14,4 +16,4 @@ mimc_df = pd.read_csv(DATA_DIR + "mimc_df.csv")
 loinc_in_mimic_df = pd.read_csv(DATA_DIR + "loinc_in_mimic_df.csv")
 
 # get accuracy
-eval(first_stage_model_loaded, mimc_df, loinc_in_mimic_df)
+test_model(first_stage_model_loaded, mimc_df, loinc_in_mimic_df)

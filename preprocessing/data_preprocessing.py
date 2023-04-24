@@ -10,7 +10,7 @@ DATA_DIR = "datasets/"
 
 ########################### Load MIMIC-III data ##############################
 # This loads the `D_LABITEMS` tables from MIMC data that's used in the paper
-mimc_df = pd.read_csv("/kaggle/input/llm-for-loinc/D_LABITEMS.csv")
+mimc_df = pd.read_csv(f"{DATA_DIR}D_LABITEMS.csv")
 
 # generates source code by concatenating the "label" & "fluid" colummns per the paper
 mimc_df["SOURCE_CODE"] = mimc_df.apply(
@@ -29,7 +29,7 @@ mimc_df = (
 ### Load official LOINC table (target codes)
 # This loads the target LOINC codes from the offical table
 
-loinc_df = pd.read_csv("/kaggle/input/llm-for-loinc/Loinc.csv")
+loinc_df = pd.read_csv(f"{DATA_DIR}Loinc.csv")
 
 ##################  Prepare data to use pre-trained model ######################
 # To test the pre-trained model, we need the MIMIC dataset, as well as a subset of the target code table

@@ -7,6 +7,8 @@ The embedding is later used for calculating cosine similarity which is used for 
 import pandas as pd
 import tensorflow_hub as hub
 
+from test_utils import test_model
+
 DATA_DIR = "datasets/"
 
 # load model
@@ -18,4 +20,4 @@ mimc_df = pd.read_csv(DATA_DIR + "mimc_df.csv")
 loinc_in_mimic_df = pd.read_csv(DATA_DIR + "loinc_in_mimic_df.csv")
 
 # get accuracy
-eval(encoder, mimc_df, loinc_in_mimic_df)
+test_model(encoder, mimc_df, loinc_in_mimic_df)
